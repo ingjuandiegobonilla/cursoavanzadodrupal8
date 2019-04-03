@@ -16,3 +16,6 @@ regions:
     footer_first: "Footer first"
     noticias: "Noticias"
     buscador: "Buscador"
+
+libraries:
+    - zahard/base

@@ -5,7 +5,7 @@ base:
         theme:
             css/estilos-globales.css: {weight: -10}
     js:
-        js/main.js: {weight-999, minified:true}
+        js/main.js: {weigh:-999, minified:true}
     dependencies:
         - core/jquery
         - core/drupal
@@ -13,7 +13,7 @@ base:
 concreto:
     version: 1.x
     js:
-        js/concreto.js: {weight-10}
+        js/concreto.js: {weight:-10}
     dependencies:
         - core/jquery
         - core/drupal
