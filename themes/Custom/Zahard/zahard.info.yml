@@ -1,0 +1,18 @@
+## YAML Template.
+name: Zahard
+type: theme
+description: "Primer tema con Drupal 8"
+core: 8.x
+package: Custom
+version: 1.0
+base theme: classy
+regions:
+    header: "Header"
+    primary_menu: "Primary menu"
+    help: "Help"
+    breadcrumb: "Breadcrumb"
+    content: "Content"
+    sidebar_first: "Sidebar first"
+    footer_first: "Footer first"
+    noticias: "Noticias"
+    buscador: "Buscador"
