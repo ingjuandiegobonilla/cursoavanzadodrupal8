@@ -1,0 +1,18 @@
+<?php
+
+function zahard_preprocess(&$variables) {
+    $variables['texto'] =  '<a href="www.google.com">click</a>';
+    $variables['fecha'] =  time();
+}
+
+function zahard_preprocess_region__buscador(&$variables) {
+    $variables['rutalogo'] = drupal_get_path('theme','zahard') . '/images/seta.svg';
+}
+
+/* 
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+?>

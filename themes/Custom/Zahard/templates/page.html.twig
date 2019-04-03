@@ -45,43 +45,46 @@
 <div class="layout-container">
 
   <header role="banner">
-      {{ dump(theme_hook_suggestions) }}  
-      {{ page.header }}
+  {{ page.header }}
   </header>
 
-  {{ page.primary_menu }}
-  {{ page.secondary_menu }}
+  <div class=layout-wrapper">
+      <aside class="col1">
+          {{ page.buscador }}
+          
+          {% if page.sidebar_first %}
+            {{ page.sidebar_first }}
+          {% endif %}
+          
+       </aside><!--
+               
+                  
+      --><div class="col2">
+          {{ page.primary_menu }}
+          {{ page.breadcrumb }}
+          {{ page.help }}
+          
+           <main role="main">
+                <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
 
-  {{ page.breadcrumb }}
+                <div class="layout-content">
+                  {{ page.content }}
+                </div>{# /.layout-content #}
 
-  {{ page.highlighted }}
+                
 
-  {{ page.help }}
+            </main>   
+      </div>
+  </div>
+  
+  
+  
 
-  <main role="main">
-    <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
+ 
 
-    <div class="layout-content">
-      {{ page.content }}
-    </div>{# /.layout-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="layout-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
-    {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="layout-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
-  </main>
-
-  {% if page.footer %}
+  {% if page.footer_first %}
     <footer role="contentinfo">
-      {{ page.footer }}
+      {{ page.footer_first }}
     </footer>
   {% endif %}
 
